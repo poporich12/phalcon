@@ -11,20 +11,20 @@ class ControllerBase extends Controller{
       ->collection('styles') // pack ไฟล์ css ที่ต้องการใช้งาน
       ->addCss('https://fonts.googleapis.com/css?family=Kanit')
       ->addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
-	  ->addCss('public/css/freelancer.css');
+	  ->addCss('public/css/business-casual.css');
 	$this->assets
       ->collection('styleslogin') // pack ไฟล์ css ที่ต้องการใช้งาน
       ->addCss('https://fonts.googleapis.com/css?family=Kanit')
       ->addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
 	  ->addCss('public/css/myStyle.css');
-  $this->assets
+    $this->assets
       ->collection('scripts') // pack ไฟล์ js ที่ต้องการใช้งาน
       ->addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
       ->addJs('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
-      ->addJs('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');   
-  
-    }	
-
+      ->addJs('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'); 
+     
+  }
+	
   public function checkAuthen()
   {
 	 if(!$this->session->has('memberAuthen')) // ตรวจสอบว่ามี session การเข้าระบบ หรือไม่
